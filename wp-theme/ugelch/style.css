@@ -1,0 +1,14 @@
+/*
+Theme Name: UGEL Chincheros
+Theme URI: https://ugelch.gob.pe
+Author: UGEL Chincheros
+Description: Portal institucional de la Unidad de Gestión Educativa Local Chincheros (Apurímac). Las páginas y el menú se crean al activar el tema. La portada se edita desde la propia página con el botón "Editar página" (solo usuarios con permiso de edición); las páginas interiores, desde el editor de WordPress (bloque HTML personalizado); y las noticias, como entradas del blog.
+Version: 1.0.0
+Requires at least: 6.3
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ugelch
+*/
+
+/* El diseño vive en assets/css/site.css; aquí solo el blog y el editor tienen hojas propias. */

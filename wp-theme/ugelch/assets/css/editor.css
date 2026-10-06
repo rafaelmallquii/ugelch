@@ -1,0 +1,44 @@
+/* Editor de la página (solo para usuarios con permiso de edición) */
+#uge-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 18px 0 14px;border:0;border-radius:999px;background:#0b2a6b;color:#fff;font:600 14px/1 Roboto,system-ui,sans-serif;box-shadow:0 8px 24px rgba(11,42,107,.35);cursor:pointer;transition:transform .16s cubic-bezier(.23,1,.32,1),background-color .2s}
+#uge-fab:hover{background:#0b55c9}
+#uge-fab:active{transform:scale(.97)}
+#uge-fab svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#uge-fab[aria-expanded=true]{display:none}
+#uge-panel{position:fixed;top:0;right:0;bottom:0;z-index:9999;width:min(420px,100vw);display:flex;flex-direction:column;background:#fff;color:#1f2a3d;box-shadow:-12px 0 40px rgba(10,30,80,.25);font:14px/1.45 Roboto,system-ui,sans-serif}
+#uge-panel[hidden]{display:none}
+.admin-bar #uge-panel{top:32px}
+@media(max-width:782px){.admin-bar #uge-panel{top:46px}}
+.uge-head{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #e2e8f1;background:#f2f5fa}
+.uge-head b{font-size:16px;color:#0b2a6b}
+.uge-status{margin-left:auto;font-size:12px;color:#5d6b80;text-align:right}
+.uge-body{flex:1;overflow:auto;padding:12px 14px 40px;overscroll-behavior:contain}
+.uge-acc{border:1px solid #e2e8f1;border-radius:10px;margin-bottom:10px;overflow:hidden}
+.uge-acc-head{width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border:0;background:#fff;color:#0b2a6b;font:600 14px/1.3 Roboto,system-ui,sans-serif;text-align:left;cursor:pointer}
+.uge-acc-head::after{content:"";width:8px;height:8px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg);transition:transform .2s}
+.uge-acc.open .uge-acc-head{background:#eaf1fd}
+.uge-acc.open .uge-acc-head::after{transform:rotate(-135deg)}
+.uge-acc-body{display:none;padding:12px 14px;border-top:1px solid #e2e8f1}
+.uge-acc.open .uge-acc-body{display:block}
+.uge-acc-global .uge-acc-head{color:#5d2c00;background:#fff7ed}
+.uge-field{display:block;margin-bottom:12px}
+.uge-field>span{display:block;margin-bottom:4px;font-size:12px;font-weight:600;color:#5d6b80}
+.uge-field input[type=text],.uge-field textarea,.uge-field select{width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c9d3e1;border-radius:6px;font:14px/1.4 Roboto,system-ui,sans-serif;color:#1f2a3d;background:#fff}
+.uge-field textarea{resize:vertical;min-height:64px}
+.uge-field input:focus,.uge-field textarea:focus,.uge-field select:focus{outline:2px solid #0b55c9;outline-offset:0;border-color:#0b55c9}
+.uge-field input[type=color]{width:56px;height:34px;padding:2px;border:1px solid #c9d3e1;border-radius:6px;background:#fff}
+.uge-img{display:flex;align-items:center;gap:10px}
+.uge-img img{width:96px;height:60px;object-fit:contain;border:1px solid #e2e8f1;border-radius:6px;background:#f2f5fa}
+.uge-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 12px;border:1px solid #c9d3e1;border-radius:6px;background:#fff;color:#0b2a6b;font:600 13px/1 Roboto,system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.uge-btn:hover{background:#eaf1fd}
+.uge-btn-primary{background:#0b55c9;border-color:#0b55c9;color:#fff}
+.uge-btn-primary:hover{background:#0b2a6b}
+.uge-btn:disabled{opacity:.5;cursor:default}
+.uge-icon-btn{width:30px;height:30px;border:0;border-radius:6px;background:transparent;color:#1f2a3d;font-size:15px;cursor:pointer}
+.uge-icon-btn:hover{background:#e2e8f1}
+.uge-sub{margin:14px 0 6px;font-weight:700;color:#0b2a6b}
+.uge-note{margin:6px 0 10px;font-size:12px;color:#5d6b80}
+.uge-info p{margin:0 0 10px}
+.uge-rep-item{border:1px solid #e2e8f1;border-radius:8px;padding:10px;margin-bottom:10px;background:#fafbfd}
+.uge-rep-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.uge-rep-head b{font-size:13px;color:#0b2a6b}
+.uge-hl{outline:3px dashed #f5b400;outline-offset:4px}
