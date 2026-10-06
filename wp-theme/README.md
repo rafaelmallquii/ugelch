@@ -4,12 +4,15 @@
 
 ## Instalar
 
-1. Comprime la carpeta del tema:
-   ```bash
-   cd wp-theme && zip -r ugelch.zip ugelch
-   ```
-2. WordPress → Apariencia → Temas → Añadir nuevo → Subir tema → `ugelch.zip` → **Activar**.
-3. Ajustes → Generales → **Idioma del sitio: Español de Perú**.
+**Lo más fácil:** descarga `ugelch.zip` desde la [release del tema](https://github.com/darwinva97/ugelch/releases/latest) y súbelo tal cual: WordPress → Apariencia → Temas → Añadir nuevo → Subir tema → **Activar**. Después, en Ajustes → Generales, pon el **idioma del sitio en Español**.
+
+Para crear el zip a mano, comprime la carpeta **`ugelch`**, no `wp-theme`:
+
+```bash
+cd wp-theme && zip -r ugelch.zip ugelch
+```
+
+> ⚠️ Si comprimes `wp-theme`, WordPress responde *"The theme is missing the style.css stylesheet"*: busca `style.css` en la primera carpeta del zip, y en `wp-theme` está un nivel más abajo, en `ugelch/`.
 
 Al activar el tema:
 - **Páginas:** crea Inicio, Noticias, Mapa del sitio y las 34 páginas interiores, cada una con su contenido en un bloque "HTML personalizado".
