@@ -14,12 +14,168 @@
   <meta property="og:url" content="https://ugelch.gob.pe/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/logo-ugel.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="preload" as="image" href="assets/img/hero-cronograma.jpg">
 </head>
-<body data-base="">
+<body data-base="" data-page="home">
   <header id="site-header"></header>
-  
-  <main id="contenido"><section class="slider" data-slider><div class="track"><img src="assets/img/slide-juegos-florales.jpg" alt="Aviso institucional"><img src="assets/img/slide-onem-2026.jpg" alt="Aviso institucional"><img src="assets/img/slide-portada.jpg" alt="Aviso institucional"><img src="assets/img/slide-educacion.jpg" alt="Aviso institucional"></div><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Siguiente">›</button></section><section class="home-grid"><article class="home-card"><h2>REDES SOCIALES</h2><div class="card-box"><p>Noticias y actividades de nuestra comunidad educativa.</p><a href="https://www.facebook.com/ugel.chinncheros">Ver Facebook</a></div></article><article class="home-card"><h2>COMUNICADOS</h2><div class="card-box"><p>Comunicados, cronogramas y orientaciones oficiales.</p><a href="documentos-de-interes/index.html">Ver comunicados</a></div></article><article class="home-card"><h2><a href="https://www.gob.pe/institucion/ugelchincheros/informes-publicaciones/tipos/353-oficio-multiple">OFICIOS</a></h2><div class="card-box"><p>Documentos y oficios emitidos por la UGEL Chincheros.</p><a href="oficios/index.html">Ver oficios</a></div></article></section><section class="home-map"><h2>UBICACIÓN</h2><iframe title="ugel chincheros" src="https://maps.google.com/maps?q=ugel%20chincheros&t=m&z=18&output=embed&iwloc=near" loading="lazy"></iframe></section><section class="video-section"><h2>VIDEO INSTITUCIONAL</h2><div class="video-wrap"><iframe src="https://www.youtube.com/embed/cXwymR4O0K4?controls=1&rel=0" title="Directromes - Fundación Romero" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section></main>
+
+  <main id="contenido">
+    <!-- Carrusel principal -->
+    <section class="hero" data-slider aria-roledescription="carrusel" aria-label="Avisos institucionales">
+      <div class="hero-track">
+        <div class="hero-slide hero-main" aria-roledescription="diapositiva" aria-label="1 de 3">
+          <div class="wrap hero-inner">
+            <div class="hero-copy">
+              <span class="hero-tag">CRONOGRAMA REGIONAL</span>
+              <h1>Reasignación de Auxiliares de Educación <em>2026</em></h1>
+              <p>Por Interés Personal y Unidad Familiar</p>
+              <a class="btn btn-hero" href="auxiliar-de-educacion/index.html">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+                Ver cronograma
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+            <img class="hero-art" src="assets/img/hero-cronograma.jpg" alt="Resolución y cronograma de reasignación junto a una familia" width="1300" height="472" fetchpriority="high">
+          </div>
+        </div>
+        <div class="hero-slide hero-img" aria-roledescription="diapositiva" aria-label="2 de 3" style="background-image:url(assets/img/slide-juegos-florales.jpg)">
+          <img src="assets/img/slide-juegos-florales.jpg" alt="Juegos Florales etapa UGEL: categoría D primaria el viernes 21 de agosto de 2026 y categorías E y F secundaria y EBA el lunes 24 de agosto de 2026, 9:00 a. m., UGEL Chincheros" width="2560" height="981" loading="lazy">
+        </div>
+        <div class="hero-slide hero-img" aria-roledescription="diapositiva" aria-label="3 de 3" style="background-image:url(assets/img/slide-onem-2026.jpg)">
+          <img src="assets/img/slide-onem-2026.jpg" alt="Olimpiada Nacional Escolar de Matemática: examen etapa UGEL el 20 de agosto, 8:30 a. m., I.E.S.M. José María Arguedas - Uripa" width="2560" height="974" loading="lazy">
+        </div>
+      </div>
+      <div class="hero-dots" role="tablist" aria-label="Elegir aviso">
+        <button type="button" role="tab" aria-label="Aviso 1" aria-selected="true"></button>
+        <button type="button" role="tab" aria-label="Aviso 2" aria-selected="false"></button>
+        <button type="button" role="tab" aria-label="Aviso 3" aria-selected="false"></button>
+      </div>
+    </section>
+
+    <div class="wrap home">
+      <!-- Comunicados / Oficios / Redes -->
+      <section class="row-3">
+        <article class="card">
+          <header class="card-head">
+            <span class="badge badge-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M3 10v4a1 1 0 0 0 1 1h2l4.5 4V5L6 9H4a1 1 0 0 0-1 1Zm13.5 2A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4ZM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6Z"/></svg></span>
+            <h2>Comunicados</h2>
+            <a class="more" href="documentos-de-interes/index.html">Ver todos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </header>
+          <ul class="doc-list">
+            <li><a href="auxiliar-de-educacion/index.html"><span class="doc doc-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="doc-txt"><time datetime="2025-03-15">15 de mar. de 2025</time>Cronograma Regional de Reasignación de Auxiliares de Educación 2026</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></li>
+            <li><a href="documentos-de-interes/index.html"><span class="doc doc-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="doc-txt"><time datetime="2025-03-10">10 de mar. de 2025</time>Precisiones sobre el proceso de reasignación - Interés Personal</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></li>
+            <li><a href="documentos-de-interes/index.html"><span class="doc doc-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="doc-txt"><time datetime="2025-03-05">05 de mar. de 2025</time>Capacitación a directores de II.EE. para el Buen Inicio del Año Escolar 2025</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <span class="badge badge-red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+            <h2>Oficios</h2>
+            <a class="more" href="oficios/index.html">Ver todos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </header>
+          <ul class="doc-list">
+            <li><a href="oficios/index.html"><span class="doc doc-red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="doc-txt"><time datetime="2025-03-14">14 de mar. de 2025</time>Oficio Múltiple N.° 026-2025 UGEL Chincheros</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></li>
+            <li><a href="oficios/index.html"><span class="doc doc-red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="doc-txt"><time datetime="2025-03-08">08 de mar. de 2025</time>Comunicado Importante sobre proceso de reasignación</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></li>
+            <li><a href="oficios/index.html"><span class="doc doc-red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="doc-txt"><time datetime="2025-03-03">03 de mar. de 2025</time>Oficio Múltiple N.° 018-2025 Orientaciones BIAE 2025</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <span class="badge badge-fb"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M13.4 21v-7.5h2.5l.4-2.9h-2.9V8.8c0-.8.2-1.4 1.4-1.4h1.6V4.8a20 20 0 0 0-2.3-.1c-2.3 0-3.8 1.4-3.8 3.9v2h-2.5v2.9h2.5V21z"/></svg></span>
+            <h2>Redes sociales</h2>
+            <a class="more" href="https://www.facebook.com/ugel.chinncheros">Ver página <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </header>
+          <div class="fb-card">
+            <div class="fb-cover"><img src="assets/img/fb-cover.jpg" alt="" width="900" height="341" loading="lazy"><svg class="fb-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path fill="#fff" d="M13.4 19.5v-6.2h2.1l.3-2.4h-2.4V9.4c0-.7.2-1.2 1.2-1.2h1.3V6.1a17 17 0 0 0-1.9-.1c-1.9 0-3.2 1.1-3.2 3.3v1.7H8.7v2.4h2.1v6.2z"/></svg></div>
+            <div class="fb-body">
+              <div class="fb-id"><span class="logo-badge"><img src="assets/img/logo-ugel.png" alt="" width="48" height="48" loading="lazy"></span><span><b>UGEL Chincheros</b><small>Página oficial en Facebook</small></span></div>
+              <p>Nueva página de la Unidad de Gestión Educativa Local de Chincheros</p>
+              <p class="fb-kind"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v4L12 21l7-3.8v-4L12 17z"/></svg>Sitio web de educación</p>
+              <a class="btn btn-fb" href="https://www.facebook.com/ugel.chinncheros"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M13.4 21v-7.5h2.5l.4-2.9h-2.9V8.8c0-.8.2-1.4 1.4-1.4h1.6V4.8a20 20 0 0 0-2.3-.1c-2.3 0-3.8 1.4-3.8 3.9v2h-2.5v2.9h2.5V21z"/></svg>Seguir</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Ubicación / Video -->
+      <section class="row-2">
+        <article class="card">
+          <header class="card-head">
+            <span class="badge badge-red"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg></span>
+            <h2>Ubicación</h2>
+            <a class="more" href="https://www.google.com/maps/search/?api=1&query=UGEL+Chincheros">Abrir en Maps <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </header>
+          <div class="loc">
+            <iframe class="loc-map" title="Mapa de la UGEL Chincheros" src="https://maps.google.com/maps?q=ugel%20chincheros&t=m&z=17&output=embed&iwloc=near" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="loc-info">
+              <p><svg class="loc-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg><span><b>Unidad de Gestión Educativa Local Chincheros - UGELCH</b>Pasaje Mirador S/N<br>Chincheros - Apurímac, Perú</span></p>
+              <p><svg class="loc-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Horario de atención</b>Lunes a viernes<br>8:30 a. m. a 4:30 p. m.</span></p>
+            </div>
+          </div>
+        </article>
+
+        <div class="video" data-video="cXwymR4O0K4">
+          <button type="button" class="video-play" aria-label="Reproducir video: Directromes - Fundación Romero">
+            <img src="assets/img/yt-thumb.jpg" alt="" width="1280" height="720" loading="lazy">
+            <span class="video-top"><span class="video-ch">FR</span><span><b>Directromes - Fundación Romero</b><small>Fundación Romero</small></span></span>
+            <span class="video-btn"><svg viewBox="0 0 68 48" aria-hidden="true"><path fill="#f00" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.3.3 34 .3 34 .3s-21.3 0-26.6 1.4a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.7 47.7 34 47.7 34 47.7s21.3 0 26.6-1.4a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3Z"/><path fill="#fff" d="m27 34 18-10-18-10z"/></svg></span>
+          </button>
+          <a class="video-yt" href="https://www.youtube.com/watch?v=cXwymR4O0K4">Ver en <svg viewBox="0 0 68 48" aria-hidden="true"><path fill="#f00" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.3.3 34 .3 34 .3s-21.3 0-26.6 1.4a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.7 47.7 34 47.7 34 47.7s21.3 0 26.6-1.4a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3Z"/><path fill="#fff" d="m27 34 18-10-18-10z"/></svg>YouTube</a>
+        </div>
+      </section>
+
+      <!-- Noticias -->
+      <section class="card news">
+        <header class="card-head">
+          <span class="badge badge-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h4M7 16h4M14 12h3v4h-3z"/></svg></span>
+          <h2>Noticias y actividades</h2>
+          <a class="more" href="convocatorias/index.html">Ver todas <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </header>
+        <div class="news-grid">
+          <a class="news-item" href="noticia1/index.html">
+            <img src="assets/img/home-noticia-1.jpg" alt="Docente dictando clase a estudiantes en un aula" width="828" height="282" loading="lazy">
+            <span class="news-body"><time datetime="2025-03-12"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm12 8H5v9h14z"/></svg>12 de mar. de 2025</time><b>Inicio del Año Escolar 2025 en la UGEL Chincheros</b><span>Instituciones educativas se preparan para un retorno seguro y con más oportunidades para nuestros estudiantes.</span></span>
+            <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+          </a>
+          <a class="news-item" href="noticia-2/index.html">
+            <img src="assets/img/home-noticia-2.jpg" alt="Institución educativa con montañas al fondo" width="828" height="282" loading="lazy">
+            <span class="news-body"><time datetime="2025-03-08"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm12 8H5v9h14z"/></svg>08 de mar. de 2025</time><b>UGEL Chincheros fortalece la gestión educativa en las II.EE.</b><span>Reuniones de trabajo con directivos para mejorar los servicios educativos en la provincia de Chincheros.</span></span>
+            <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+          </a>
+          <a class="news-item" href="noticia-3/index.html">
+            <img src="assets/img/home-noticia-3.jpg" alt="Docentes y autoridades en una jornada de capacitación" width="828" height="282" loading="lazy">
+            <span class="news-body"><time datetime="2025-03-05"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm12 8H5v9h14z"/></svg>05 de mar. de 2025</time><b>Capacitación docente para el Buen Inicio del Año Escolar</b><span>Espacios de formación y acompañamiento pedagógico para una educación de calidad.</span></span>
+            <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Accesos rápidos -->
+    <section class="quick">
+      <div class="wrap">
+        <header class="card-head quick-head">
+          <span class="badge badge-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg></span>
+          <h2>Accesos rápidos</h2>
+        </header>
+        <div class="quick-grid">
+          <a class="quick-item" href="marco-legal/index.html"><span class="q-ic" style="--c:#1463d8"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><b>Normas<br>y directivas</b></a>
+          <a class="quick-item" href="tupa/index.html"><span class="q-ic" style="--c:#e3262b"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.3c3.2-.6 6 1.6 6 5.7"/></svg></span><b>Trámites<br>y servicios</b></a>
+          <a class="quick-item" href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=15333"><span class="q-ic" style="--c:#f59e0b"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v1H7.5L5 19H5a2 2 0 0 1-2-2z"/><path d="M7.5 10H22l-2.5 9H5z"/></svg></span><b>Transparencia<br>y acceso a la información</b></a>
+          <a class="quick-item" href="https://escale.minedu.gob.pe/"><span class="q-ic" style="--c:#16a34a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20V12M12 20V5M18 20v-8"/></svg></span><b>Estadísticas<br>educativas</b></a>
+          <a class="quick-item" href="agenda-institucional/index.html"><span class="q-ic" style="--c:#9333ea"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/></svg></span><b>Calendario<br>institucional</b></a>
+          <a class="quick-item" href="consulta-tu-expediente/index.html"><span class="q-ic" style="--c:#64748b"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="3.5"/><path d="M5 20c.8-3.5 3.6-5.5 7-5.5s6.2 2 7 5.5"/></svg></span><b>Mesa de partes<br>virtual</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer id="site-footer"></footer>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/site.js"></script>
