@@ -3,7 +3,6 @@
 const icon = (d, cls) => `<svg class="${cls || "ic"}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${d}</svg>`;
 const I = {
   chev: '<path d="m6 9 6 6 6-6"/>',
-  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
   building: '<path d="M4 21V5l8-3 8 3v16"/><path d="M2 21h20M9 21v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/>',
   pin: '<path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/>',
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
@@ -36,7 +35,7 @@ function header(b, slug) {
     `<a href="${b}index.html"${slug === "home" ? ' class="active" aria-current="page"' : ""}>INICIO</a>` +
     GROUPS.map(drop).join("") +
     `<a href="https://www.gob.pe/ugelchincheros">GOB.PE</a>` +
-    `<a class="trans" href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=15333">${icon(I.search)}<span>Portal de<br>Transparencia</span></a>` +
+    `<a class="trans" href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=15333"><img src="${b}assets/img/logo-portal-transparencia.webp" alt="Portal de Transparencia Estándar" width="371" height="158"></a>` +
     `<a class="fb-link" href="https://www.facebook.com/ugel.chinncheros">${fb}Facebook</a>` +
     `</div></div></nav>`;
 }

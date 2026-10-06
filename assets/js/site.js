@@ -15,13 +15,53 @@
     slider.addEventListener("mouseenter", () => clearInterval(timer));
     slider.addEventListener("mouseleave", play);
     slider.addEventListener("focusin", () => clearInterval(timer));
-    let x0 = null;
-    slider.addEventListener("touchstart", e => x0 = e.touches[0].clientX, {passive: true});
-    slider.addEventListener("touchend", e => {
-      if (x0 === null) return;
-      const dx = e.changedTouches[0].clientX - x0; x0 = null;
-      if (Math.abs(dx) > 40) { go(i + (dx < 0 ? 1 : -1)); play(); }
+
+    // Arrastre con dedo o ratón: la diapositiva sigue al puntero y al soltar avanza,
+    // retrocede o vuelve a su sitio según la distancia y la velocidad del gesto
+    let drag = null, moved = false;
+    const at = dx => track.style.transform = "translateX(calc(-" + i * 100 + "% + " + dx + "px))";
+    track.addEventListener("dragstart", e => e.preventDefault());
+    track.addEventListener("pointerdown", e => {
+      if (e.button !== 0 || e.target.closest(".hero-dots")) return;
+      drag = {x: e.clientX, y: e.clientY, t: e.timeStamp, dx: 0, id: e.pointerId, axis: null};
+      moved = false;
+      clearInterval(timer);
     });
+    track.addEventListener("pointermove", e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      // Decide el eje en los primeros píxeles: si es vertical, deja hacer scroll a la página
+      if (!drag.axis && Math.hypot(dx, dy) > 6) {
+        drag.axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+        if (drag.axis === "x") { track.setPointerCapture(e.pointerId); track.classList.add("dragging"); }
+      }
+      if (drag.axis !== "x") return;
+      moved = true;
+      drag.dx = dx;
+      at(dx);
+    });
+    const end = e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const {dx, t, axis} = drag; drag = null;
+      track.classList.remove("dragging");
+      if (axis === "x") {
+        const w = slider.clientWidth, v = Math.abs(dx) / Math.max(e.timeStamp - t, 1);
+        go(Math.abs(dx) > w * .2 || (v > .4 && Math.abs(dx) > 20) ? i + (dx < 0 ? 1 : -1) : i);
+      }
+      play();
+    };
+    track.addEventListener("pointerup", end);
+    track.addEventListener("pointercancel", end);
+    // Un arrastre no debe activar el enlace que hay debajo
+    track.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+
+    // Flechas del teclado sobre los puntos
+    dots.forEach((d, k) => d.addEventListener("keydown", e => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+      go(i + (e.key === "ArrowRight" ? 1 : -1));
+      dots[i].focus();
+    }));
     go(0); play();
   }
 
