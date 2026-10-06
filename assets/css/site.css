@@ -142,8 +142,10 @@ svg{flex:none}
 .hero-art{width:100%;height:100%;max-height:100%;object-fit:contain;object-position:right bottom;mix-blend-mode:multiply;align-self:end;padding:20px 5% 0 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%),linear-gradient(180deg,transparent,#000 10%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 8%),linear-gradient(180deg,transparent,#000 10%);mask-composite:intersect}
 .hero-img{background:#fff}
 .hero-img img{width:100%;height:100%;object-fit:contain;object-position:center}
-/* Los puntos van debajo de la imagen para no tapar el contenido de los avisos */
-.hero-dots{display:flex;justify-content:center;gap:6px;padding:6px 0;background:#fff}
+/* Los puntos van dentro de la imagen, en la esquina inferior derecha, para que el
+   carrusel mida lo mismo que la imagen sin tapar el texto central de los avisos */
+.hero{position:relative}
+.hero-dots{position:absolute;right:16px;bottom:12px;z-index:2;display:flex;gap:2px;padding:2px 6px;border-radius:999px;background:rgba(255,255,255,.82);box-shadow:0 1px 4px rgba(0,0,0,.15)}
 .hero-dots button{width:22px;height:22px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
 .hero-dots button::before{content:"";width:8px;height:8px;border-radius:50%;background:#7d8ca6;transition:background-color .2s,transform .2s var(--ease)}
 .hero-dots button[aria-selected=true]::before{background:var(--blue);transform:scale(1.15)}
@@ -418,3 +420,4 @@ a:hover>.go{transform:translateX(3px)}
   .btn-hero{height:42px;font-size:15px}
   .hero-tag{font-size:13px}
 }
+@media(max-width:760px){.hero-dots{right:8px;bottom:6px;padding:0 4px}.hero-dots button{width:20px;height:20px}}
