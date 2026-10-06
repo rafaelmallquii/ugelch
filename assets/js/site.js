@@ -3,14 +3,23 @@
   if (slider) {
     const track = slider.querySelector(".hero-track"), slides = [...track.children], dots = [...slider.querySelectorAll(".hero-dots button")];
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // En móvil cada diapositiva tiene su altura (el aviso completo a todo el ancho);
+    // el carrusel se adapta a la que está a la vista y no avanza solo, para que la
+    // página no salte mientras se lee
+    const narrow = matchMedia("(max-width: 760px)");
+    const fit = () => track.style.height = narrow.matches ? slides[i].offsetHeight + "px" : "";
     let i = 0, timer;
     const go = n => {
       i = (n + slides.length) % slides.length;
       track.style.transform = "translateX(-" + i * 100 + "%)";
+      fit();
       slides.forEach((s, k) => s.inert = k !== i);
       dots.forEach((d, k) => d.setAttribute("aria-selected", String(k === i)));
     };
-    const play = () => { if (!still) { clearInterval(timer); timer = setInterval(() => go(i + 1), 7000); } };
+    const play = () => { clearInterval(timer); if (!still && !narrow.matches) timer = setInterval(() => go(i + 1), 7000); };
+    addEventListener("resize", fit);
+    narrow.addEventListener("change", () => { fit(); play(); });
+    slides.forEach(s => s.querySelectorAll("img").forEach(im => im.complete || im.addEventListener("load", fit, {once: true})));
     dots.forEach((d, k) => d.onclick = () => { go(k); play(); });
     slider.addEventListener("mouseenter", () => clearInterval(timer));
     slider.addEventListener("mouseleave", play);

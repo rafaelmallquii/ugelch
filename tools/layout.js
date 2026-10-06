@@ -27,7 +27,7 @@ function header(b, slug) {
   };
   return `<a class="skip" href="#contenido">Ir al contenido</a>` +
     `<div class="topbar"><div class="wrap"><img class="gov" src="${b}assets/img/brand-strip.webp" alt="Perú – Ministerio de Educación, DRE Apurímac y UGEL Chincheros" width="890" height="94">` +
-    `<a class="intranet" href="${b}paginas.html" aria-label="Intranet">${icon(I.building)}<span>Intranet</span></a></div></div>` +
+    `<a class="intranet" href="https://workspace.ugelch.gob.pe/" aria-label="Workspace">${icon(I.building)}<span>Workspace</span></a></div></div>` +
     `<nav class="mainnav" aria-label="Principal"><div class="wrap">` +
     `<a class="logo" href="${b}index.html"><span class="logo-badge"><img src="${b}assets/img/logo-ugel.webp" alt="" width="56" height="56"></span><span><b>UGEL Chincheros</b><small>Unidad de Gestión Educativa Local</small></span></a>` +
     `<button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>` +
